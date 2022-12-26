@@ -8,12 +8,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { MenuComponent } from './menu/menu.component';
 
-import { HansLibModule } from 'hans-lib';
+import { HansLibModule, MouseService, ScreenService } from 'hans-lib';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent
+  ],
+  providers: [
+    ScreenService,
+    MouseService
   ],
   imports: [
     BrowserModule,
@@ -22,7 +27,7 @@ import { HansLibModule } from 'hans-lib';
     MaterialModule,
     HansLibModule
   ],
-  providers: [],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

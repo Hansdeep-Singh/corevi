@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "installstart": "npm install --force && ng serve",
+    "is": "npm install --force && ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -22,7 +22,7 @@
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/pwa": "^15.0.4",
     "@angular/router": "^14.2.0",
-    "hans-lib": "file:../AngularLibrary/dist/hans-lib/hans-lib-0.0.6.tgz",
+    "hans-lib": "file:../AngularLibrary/dist/hans-lib/hans-lib-0.0.27.tgz",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
