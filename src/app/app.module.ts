@@ -9,12 +9,18 @@ import { MaterialModule } from './material.module';
 import { MenuComponent } from './menu/menu.component';
 
 import { HansLibModule, MouseService, ScreenService } from 'hans-lib';
+import { CarouselComponent } from './carousel/carousel.component';
+import { SignatureComponent } from './signature/signature.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent,
+    CarouselComponent,
+    SignatureComponent,
+    HeaderComponent
   ],
   providers: [
     ScreenService,
