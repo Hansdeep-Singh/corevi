@@ -12,6 +12,11 @@ import { HansLibModule, MouseService, ScreenService } from 'hans-lib';
 import { CarouselComponent } from './carousel/carousel.component';
 import { SignatureComponent } from './signature/signature.component';
 import { HeaderComponent } from './header/header.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { ShopComponent } from './shop/shop.component';
+import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -20,7 +25,12 @@ import { HeaderComponent } from './header/header.component';
     MenuComponent,
     CarouselComponent,
     SignatureComponent,
-    HeaderComponent
+    HeaderComponent,
+    AboutComponent,
+    ContactComponent,
+    ShopComponent,
+    HomeComponent,
+    PageNotFoundComponent
   ],
   providers: [
     ScreenService,

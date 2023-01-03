@@ -64,20 +64,21 @@ $corevi-theme: mat.define-light-theme((color: (primary: $corevi-primary,
 //   box-sizing: border-box;
 //   outline: 1px solid rgb(174, 255, 0) !important;
 // }
+
 @include mat.core($corevi-body-typography);
 // @include mat.button-typography($corevi-custom-typography);
 
 
-.test {
-  @include mat.typography-level($corevi-statement-typography, 'body-2');
-  font-size: 48px;
-  line-height: 3rem;
 
-}
 
 html,
 body {
   margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 #menu {
@@ -198,4 +199,78 @@ body {
     justify-content: space-around;
     align-items: center;
   }
+}
+
+#videos {
+  .col-md {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}
+
+.test {
+  @include mat.typography-level($corevi-statement-typography, 'body-2');
+  font-size: 48px;
+  line-height: 3rem;
+}
+
+.spacer-1 {
+  margin-top: 10px;
+  min-width: 100%;
+}
+
+.spacer-2 {
+  margin-top: 20px;
+  min-width: 100%;
+}
+
+.spacer-3 {
+  margin-top: 30px;
+  min-width: 100%;
+}
+
+.spacer-4 {
+  margin-top: 40px;
+  min-width: 100%;
+}
+
+.spacer-5 {
+  margin-top: 50px;
+  min-width: 100%;
+}
+
+.spacer-6 {
+  margin-top: 60px;
+  min-width: 100%;
+}
+
+.spacer-7 {
+  margin-top: 70px;
+  min-width: 100%;
+}
+
+.spacer-8 {
+  margin-top: 80px;
+  min-width: 100%;
+}
+
+.spacer-9 {
+  margin-top: 90px;
+  min-width: 100%;
+}
+
+.spacer-10 {
+  margin-top: 100px;
+  min-width: 100%;
+}
+
+.spacer-11 {
+  margin-top: 110px;
+  min-width: 100%;
+}
+
+.spacer-12 {
+  margin-top: 120px;
+  min-width: 100%;
 }
