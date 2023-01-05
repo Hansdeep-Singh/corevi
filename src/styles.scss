@@ -65,6 +65,11 @@ $corevi-theme: mat.define-light-theme((color: (primary: $corevi-primary,
 //   outline: 1px solid rgb(174, 255, 0) !important;
 // }
 
+.grid {
+  box-sizing: border-box;
+  outline: 1px solid rgb(65, 65, 65) !important;
+}
+
 @include mat.core($corevi-body-typography);
 // @include mat.button-typography($corevi-custom-typography);
 
@@ -108,27 +113,57 @@ h5:before {
 
 p {
   font-size: 1.06em;
-  color: $secondary-100;
+  color: $black-300;
   font-weight: 600;
-  opacity: 0.7;
+
 }
 
+
+@media only screen and (max-width: 992px) {
+
+  div[class^='col-lg'],
+  div[class*='col-lg'] {
+    margin: $margin;
+  }
+}
+
+// .col-lg {
+//   background-color: rgb(30, 11, 50);
+// }
+
 // Master styles end
+
+// Common styles start
+.container {
+  padding: $padding;
+}
+
+// Common styles end
+
 //Sections start
 #menu {
   background-color: $secondary-100;
 
-  .container {
+  .menu {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 75%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     img {
-      margin-left: 0.3em;
-      height: 30px;
+      height: 37px;
+      margin: 7px 0px;
     }
   }
+
+
 }
 
 #carousel {
@@ -221,6 +256,18 @@ p {
   }
 }
 
+#grid {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin: 11px;
+  background-color: yellow;
+
+
+
+}
+
 #header {
   .video {
     height: 400px;
@@ -236,14 +283,19 @@ p {
 }
 
 #videos {
-  .col-md {
+  .col-lg {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+  }
+
+  iframe {
+    margin: 5vw;
   }
 }
 
 #about {
+
+
   .about-container {
     position: relative;
   }
@@ -261,7 +313,7 @@ p {
     background-repeat: no-repeat;
     background-color: #FFDEE9;
     background-image: linear-gradient(to right top, #42d3fd, #85d9ff, #b1dfff, #d2e6ff, #eaefff, #eaefff, #eaefff, #eaefff, #d2e6ff, #b1dfff, #85d9ff, #42d3fd);
-    z-index: 3;
+    z-index: 1;
   }
 
   .about:after {
@@ -361,6 +413,6 @@ p {
 }
 
 .spacer-12 {
-  height: 120px;
+  height: 20px;
   min-width: 100%;
 }

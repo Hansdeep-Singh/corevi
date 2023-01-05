@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 import { MaterialModule } from './material.module';
 import { MenuComponent } from './menu/menu.component';
@@ -18,6 +19,8 @@ import { ShopComponent } from './shop/shop.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CounterComponent } from './counter/counter.component';
+import { GrdComponent } from './grd/grd.component';
+
 
 
 @NgModule({
@@ -32,7 +35,9 @@ import { CounterComponent } from './counter/counter.component';
     ShopComponent,
     HomeComponent,
     PageNotFoundComponent,
-    CounterComponent
+    CounterComponent,
+    GrdComponent
+
   ],
   providers: [
     ScreenService,
@@ -43,7 +48,8 @@ import { CounterComponent } from './counter/counter.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HansLibModule
+    HansLibModule,
+    FormsModule
   ],
 
   bootstrap: [AppComponent]

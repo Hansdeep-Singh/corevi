@@ -24,6 +24,6 @@ export class MenuComponent implements OnInit {
   }
 
   get condition() {
-    return (this.screenService.screenWidth$.value > 564);
+    return (this.screenService.screenWidth$.value > 638);
   }
 }

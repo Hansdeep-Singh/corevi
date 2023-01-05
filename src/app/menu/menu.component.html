@@ -1,6 +1,6 @@
 <ng-container *ngIf="condition; else mobileMenu">
   <section id="menu">
-    <div class="container">
+    <div class="menu">
       <img src="../assets/images/logo.svg" [routerLink]="['/']" />
       <div>
         <button mat-button [routerLink]="['/about']">About</button>
@@ -22,7 +22,7 @@
 </ng-container>
 <ng-template #mobileMenu>
   <section id="menu">
-    <div class="container">
+    <div class="menu">
       <img src="../assets/images/logo.svg" class="img-fluid" />
       <div>
         <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
@@ -31,7 +31,7 @@
         <mat-menu #menu="matMenu">
           <button mat-menu-item>
             <mat-icon>info</mat-icon>
-            <span>About</span>
+            <span [routerLink]="['/about']">About</span>
           </button>
           <button mat-menu-item [matMenuTriggerFor]="belowMenu">
             <mat-icon>book</mat-icon>
