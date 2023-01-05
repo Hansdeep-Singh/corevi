@@ -17,6 +17,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ShopComponent } from './shop/shop.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CounterComponent } from './counter/counter.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ContactComponent,
     ShopComponent,
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CounterComponent
   ],
   providers: [
     ScreenService,

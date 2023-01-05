@@ -69,18 +69,52 @@ $corevi-theme: mat.define-light-theme((color: (primary: $corevi-primary,
 // @include mat.button-typography($corevi-custom-typography);
 
 
-
+// Master styles start
 
 html,
-body {
-  margin: 0;
-}
+
 
 img {
   max-width: 100%;
   height: auto;
 }
 
+h1 {}
+
+h2 {}
+
+h3 {}
+
+h4 {}
+
+h5 {
+  position: relative;
+  padding-left: 25px;
+  letter-spacing: 0.11em;
+  color: $secondary-100 !important;
+}
+
+h5:before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 2px;
+  background-color: $secondary-100;
+}
+
+p {
+  font-size: 1.06em;
+  color: $secondary-100;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+// Master styles end
+//Sections start
 #menu {
   background-color: $secondary-100;
 
@@ -107,7 +141,7 @@ img {
 
   .round-slab {
     width: 100%;
-    height: 25px;
+    height: 13px;
     background-color: $primary-100;
     position: relative;
   }
@@ -116,9 +150,9 @@ img {
     content: '';
     position: absolute;
     top: 0;
-    right: -25px;
-    width: 50px;
-    height: 50px;
+    right: -13px;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
     background-color: $primary-100;
   }
@@ -127,48 +161,48 @@ img {
     content: '';
     position: absolute;
     top: 0;
-    left: -25px;
-    width: 50px;
-    height: 50px;
+    left: -13px;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
     background-color: $primary-100;
   }
 
   @keyframes leftToRight {
     0% {
-      left: -25px;
+      left: -13px;
     }
 
     20% {
-      left: calc(100% - 25px);
+      left: calc(100% - 13px);
     }
 
     100% {
-      left: -25px;
+      left: -13px;
     }
   }
 
   @keyframes rightToLeft {
     0% {
-      right: -25px;
+      right: -13px;
     }
 
     20% {
-      right: calc(100% - 25px);
+      right: calc(100% - 13px);
     }
 
     100% {
-      right: -25px;
+      right: -13px;
     }
   }
 
   .circle-left {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 26px;
+    height: 26px;
     background-color: $secondary-100;
     border-radius: 50%;
-    left: -25px;
+    left: -13px;
     z-index: 1;
 
     animation: 7s 1 leftToRight;
@@ -176,11 +210,11 @@ img {
 
   .circle-right {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 26px;
+    height: 26px;
     background-color: $secondary-100;
     border-radius: 50%;
-    right: -25px;
+    right: -13px;
     z-index: 1;
 
     animation: 7s 1 rightToLeft;
@@ -209,68 +243,124 @@ img {
   }
 }
 
-.test {
+#about {
+  .about-container {
+    position: relative;
+  }
+
+
+  .col-lg-5 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    gap: 20px 30px;
+  }
+
+  .about {
+    background-repeat: no-repeat;
+    background-color: #FFDEE9;
+    background-image: linear-gradient(to right top, #42d3fd, #85d9ff, #b1dfff, #d2e6ff, #eaefff, #eaefff, #eaefff, #eaefff, #d2e6ff, #b1dfff, #85d9ff, #42d3fd);
+    z-index: 3;
+  }
+
+  .about:after {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    content: "";
+    width: 100%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    opacity: .5;
+    background-image: url("./assets/images/about-bg.svg");
+  }
+
+  .counter-box {
+    padding: 30px 0;
+    color: $white-100;
+    display: flex;
+    justify-content: space-around;
+    background-color: $tertiary-100;
+    border-radius: $border-radius;
+  }
+
+  img {
+    border-radius: $border-radius;
+  }
+
+
+
+}
+
+//Sections End
+.font-dancing-script {
   @include mat.typography-level($corevi-statement-typography, 'body-2');
-  font-size: 48px;
+  font-size: 38px;
   line-height: 3rem;
+  letter-spacing: 0.03em !important;
 }
 
 .spacer-1 {
-  margin-top: 10px;
+  height: 10px;
   min-width: 100%;
 }
 
 .spacer-2 {
-  margin-top: 20px;
+  height: 20px;
   min-width: 100%;
 }
 
 .spacer-3 {
-  margin-top: 30px;
+  height: 30px;
   min-width: 100%;
 }
 
 .spacer-4 {
-  margin-top: 40px;
+  height: 40px;
   min-width: 100%;
 }
 
 .spacer-5 {
-  margin-top: 50px;
+  height: 50px;
   min-width: 100%;
 }
 
 .spacer-6 {
-  margin-top: 60px;
+  height: 60px;
   min-width: 100%;
 }
 
 .spacer-7 {
-  margin-top: 70px;
+  height: 70px;
   min-width: 100%;
 }
 
 .spacer-8 {
-  margin-top: 80px;
+  height: 80px;
   min-width: 100%;
 }
 
 .spacer-9 {
-  margin-top: 90px;
+  height: 90px;
   min-width: 100%;
 }
 
 .spacer-10 {
-  margin-top: 100px;
+  height: 100px;
   min-width: 100%;
 }
 
 .spacer-11 {
-  margin-top: 110px;
+  height: 110px;
   min-width: 100%;
 }
 
 .spacer-12 {
-  margin-top: 120px;
+  height: 120px;
   min-width: 100%;
 }

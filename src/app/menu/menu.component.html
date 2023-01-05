@@ -33,10 +33,14 @@
             <mat-icon>info</mat-icon>
             <span>About</span>
           </button>
-          <button mat-menu-item>
+          <button mat-menu-item [matMenuTriggerFor]="belowMenu">
             <mat-icon>book</mat-icon>
             <span>Library</span>
           </button>
+          <mat-menu #belowMenu="matMenu" yPosition="below">
+            <button mat-menu-item>Book-1</button>
+            <button mat-menu-item>Book-2</button>
+          </mat-menu>
           <button mat-menu-item>
             <mat-icon>shopping_cart</mat-icon>
             <span>Shop</span>
