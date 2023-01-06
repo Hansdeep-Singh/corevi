@@ -82,6 +82,8 @@ html,
 img {
   max-width: 100%;
   height: auto;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow-3;
 }
 
 h1 {}
@@ -258,14 +260,14 @@ p {
 
 #grid {
   position: fixed;
-  top: 0;
+  top: 43px;
+  padding: 0 5px;
+  border: 1px dashed $secondary-100;
   left: 50%;
   transform: translate(-50%, 0);
   margin: 11px;
   background-color: yellow;
-
-
-
+  border-radius: 7px;
 }
 
 #header {
@@ -288,18 +290,13 @@ p {
     justify-content: center;
   }
 
-  iframe {
-    margin: 5vw;
-  }
+
 }
 
 #about {
-
-
   .about-container {
     position: relative;
   }
-
 
   .col-lg-5 {
     display: flex;
@@ -312,7 +309,7 @@ p {
   .about {
     background-repeat: no-repeat;
     background-color: #FFDEE9;
-    background-image: linear-gradient(to right top, #42d3fd, #85d9ff, #b1dfff, #d2e6ff, #eaefff, #eaefff, #eaefff, #eaefff, #d2e6ff, #b1dfff, #85d9ff, #42d3fd);
+    background-image: $gradiant-background;
     z-index: 1;
   }
 
@@ -344,9 +341,50 @@ p {
   img {
     border-radius: $border-radius;
   }
+}
 
+#contact {
+  header {
+    background-image: $gradiant-background;
+  }
 
+  mat-label {
+    display: flex;
+    align-items: center;
+  }
 
+  mat-icon {
+    margin-right: 5px;
+  }
+
+  mat-form-field {
+    width: 100%;
+  }
+
+  p {
+    margin: initial;
+  }
+
+  span {
+    font-size: small;
+    font-weight: bold;
+  }
+
+  .accent {
+    opacity: 0.6;
+  }
+
+  .contact-form {
+    padding: 20px;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow-3;
+  }
+
+  .phone-numbers {
+    margin-top: $margin-top;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 //Sections End
