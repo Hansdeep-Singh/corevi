@@ -1,7 +1,7 @@
 <ng-container *ngIf="condition; else mobileMenu">
   <section id="menu">
     <div class="menu">
-      <img src="../assets/images/logo.svg" [routerLink]="['/']" />
+      <img class="logo" src="../assets/images/logo.svg" [routerLink]="['/']" />
       <div>
         <button mat-button [routerLink]="['/about']">About</button>
 
@@ -47,7 +47,7 @@
           </button>
           <button mat-menu-item>
             <mat-icon>call</mat-icon>
-            <span>Contact</span>
+            <span [routerLink]="['/contact']">Contact</span>
           </button>
         </mat-menu>
       </div>

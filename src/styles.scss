@@ -32,11 +32,9 @@ $corevi-accent: mat.define-palette($md-corevi-dogger-blue, A200, A100, A400);
 // The warn palette is optional (defaults to red).
 $corevi-warn: mat.define-palette($md-corevi-warn);
 
-$corevi-body-typography: mat.define-typography-config($font-family: 'M PLUS Rounded 1c',
-  );
-$corevi-statement-typography: mat.define-typography-config($font-family: 'Dancing Script',
-
-  );
+$corevi-body-typography: mat.define-typography-config($font-family: 'M PLUS Rounded 1c', );
+$corevi-button-typography: mat.define-typography-config($font-family: 'M PLUS Rounded 1c', );
+$corevi-statement-typography: mat.define-typography-config($font-family: 'Shadows Into Light', );
 
 $my-custom-level: mat.define-typography-level($font-family: Roboto,
     $font-weight: 400,
@@ -65,34 +63,39 @@ $corevi-theme: mat.define-light-theme((color: (primary: $corevi-primary,
 //   outline: 1px solid rgb(174, 255, 0) !important;
 // }
 
+
+//To be transfered to the library
 .grid {
   box-sizing: border-box;
   outline: 1px solid rgb(65, 65, 65) !important;
 }
 
 @include mat.core($corevi-body-typography);
-// @include mat.button-typography($corevi-custom-typography);
+@include mat.button-typography($corevi-button-typography);
 
 
 // Master styles start
 
 html,
 
+header {
+  background-image: $gradiant-background;
+}
 
-img {
+img:not(.logo) {
   max-width: 100%;
   height: auto;
   border-radius: $border-radius;
   box-shadow: $box-shadow-3;
 }
 
-h1 {}
+// h1 {}
 
-h2 {}
+// h2 {}
 
-h3 {}
+// h3 {}
 
-h4 {}
+// h4 {}
 
 h5 {
   position: relative;
@@ -117,7 +120,6 @@ p {
   font-size: 1.06em;
   color: $black-300;
   font-weight: 600;
-
 }
 
 
@@ -160,7 +162,7 @@ p {
     justify-content: space-between;
 
     img {
-      height: 37px;
+      height: 32px;
       margin: 7px 0px;
     }
   }
@@ -271,6 +273,12 @@ p {
 }
 
 #header {
+  h1 {
+    font-size: 38px;
+    line-height: 3rem;
+    letter-spacing: 0.03em !important;
+  }
+
   .video {
     height: 400px;
     border: 4px solid $primary-100;
@@ -294,9 +302,7 @@ p {
 }
 
 #about {
-  .about-container {
-    position: relative;
-  }
+
 
   .col-lg-5 {
     display: flex;
@@ -304,29 +310,6 @@ p {
     justify-content: space-around;
     align-items: flex-end;
     gap: 20px 30px;
-  }
-
-  .about {
-    background-repeat: no-repeat;
-    background-color: #FFDEE9;
-    background-image: $gradiant-background;
-    z-index: 1;
-  }
-
-  .about:after {
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    content: "";
-    width: 100%;
-    position: absolute;
-    right: 0;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 0;
-    opacity: .5;
-    background-image: url("./assets/images/about-bg.svg");
   }
 
   .counter-box {
@@ -344,9 +327,6 @@ p {
 }
 
 #contact {
-  header {
-    background-image: $gradiant-background;
-  }
 
   mat-label {
     display: flex;
@@ -388,11 +368,10 @@ p {
 }
 
 //Sections End
+
+//Fonts
 .font-dancing-script {
   @include mat.typography-level($corevi-statement-typography, 'body-2');
-  font-size: 38px;
-  line-height: 3rem;
-  letter-spacing: 0.03em !important;
 }
 
 .spacer-1 {
@@ -453,4 +432,9 @@ p {
 .spacer-12 {
   height: 20px;
   min-width: 100%;
+}
+
+.horizontal-flex-center {
+  display: flex;
+  justify-content: center;
 }
