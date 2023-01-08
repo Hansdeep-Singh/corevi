@@ -32,9 +32,9 @@ $corevi-accent: mat.define-palette($md-corevi-dogger-blue, A200, A100, A400);
 // The warn palette is optional (defaults to red).
 $corevi-warn: mat.define-palette($md-corevi-warn);
 
-$corevi-body-typography: mat.define-typography-config($font-family: 'M PLUS Rounded 1c', );
-$corevi-button-typography: mat.define-typography-config($font-family: 'M PLUS Rounded 1c', );
-$corevi-statement-typography: mat.define-typography-config($font-family: 'Shadows Into Light', );
+$corevi-body-typography: mat.define-typography-config($font-family: $font-body, );
+$corevi-button-typography: mat.define-typography-config($font-family: $font-button );
+$corevi-statement-typography: mat.define-typography-config($font-family: $font-statement, );
 
 $my-custom-level: mat.define-typography-level($font-family: Roboto,
     $font-weight: 400,
@@ -74,9 +74,10 @@ $corevi-theme: mat.define-light-theme((color: (primary: $corevi-primary,
 @include mat.button-typography($corevi-button-typography);
 
 
+
 // Master styles start
 
-html,
+
 
 header {
   background-image: $gradiant-background;
@@ -97,11 +98,14 @@ img:not(.logo) {
 
 // h4 {}
 
-h5 {
+
+.mat-h5,
+.mat-typography h5 {
   position: relative;
   padding-left: 25px;
   letter-spacing: 0.11em;
   color: $secondary-100 !important;
+  font-size: 1.25rem;
 }
 
 h5:before {
@@ -118,6 +122,7 @@ h5:before {
 
 p {
   font-size: 1.06em;
+  line-height: 1.5em;
   color: $black-300;
   font-weight: 600;
 }
@@ -370,8 +375,9 @@ p {
 //Sections End
 
 //Fonts
-.font-dancing-script {
-  @include mat.typography-level($corevi-statement-typography, 'body-2');
+.font-statement {
+  font-family: $font-statement !important;
+  color: $secondary-100;
 }
 
 .spacer-1 {
