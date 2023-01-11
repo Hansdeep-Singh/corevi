@@ -23,7 +23,7 @@
     "@angular/pwa": "^15.0.4",
     "@angular/router": "^14.2.0",
     "bootstrap": "^5.3.0-alpha1",
-    "hans-lib": "file:../AngularLibrary/dist/hans-lib/hans-lib-0.0.31.tgz",
+    "hans-lib": "file:../AngularLibrary/dist/hans-lib/hans-lib-0.0.44.tgz",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

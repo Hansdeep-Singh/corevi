@@ -1,0 +1,38 @@
+<!-- <section id="login">
+    <form [formGroup]="loginForm" (ngSubmit)="submit(loginForm.value)">
+        <input id="emailAddress" name="emailAddress" placeholder="Email Address" formControlName="emailAddress"
+            fype="text">
+        <input id="password" name="password" formControlName="password" placeholder="Password" fype="text">
+        <button type="submit">Login</button><br />
+        <a [routerLink]="['/forgot']">Forgot Password?</a>
+    </form>
+</section> -->
+
+<section id="login">
+    <form [formGroup]="loginForm" (ngSubmit)="submit(loginForm.value)">
+        <div class="container login">
+            <div class="row">
+                <div class="col">
+                    <mat-form-field appearance="fill">
+                        <mat-label> <mat-icon>badge</mat-icon>Email Address</mat-label>
+                        <input matInput formControlName="emailAddress">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <mat-form-field appearance="fill">
+                        <mat-label> <mat-icon>badge</mat-icon>Password</mat-label>
+                        <input matInput formControlName="password">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col"> <button mat-raised-button color="primary">Submit</button></div>
+            </div>
+            <div class="row">
+                <div class="col"> <a [routerLink]="['/forgot']">Forgot Password?</a></div>
+            </div>
+        </div>
+    </form>
+</section>

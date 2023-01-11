@@ -1,6 +1,9 @@
 <app-menu></app-menu>
 
 <!-- <lib-ui-debug></lib-ui-debug> -->
+<div [@notifyTrigger]="flagShowHide?'show':'hide'">
+  <lib-notify (close)="closeNotification($event)"></lib-notify>
+</div>
 <app-grd></app-grd>
 <router-outlet></router-outlet>
 <!-- <app-carousel></app-carousel> -->
@@ -8,7 +11,7 @@
 
 
 <!-- Components example -->
-<!-- <section>
+<section>
   <div class="example-label">Basic</div>
   <div class="example-button-row">
     <button mat-button>Basic</button>
@@ -133,4 +136,4 @@
       </div>
     </div>
   </div>
-</section> -->
+</section>

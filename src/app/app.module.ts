@@ -4,7 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 import { MaterialModule } from './material.module';
 import { MenuComponent } from './menu/menu.component';
@@ -20,6 +21,8 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CounterComponent } from './counter/counter.component';
 import { GrdComponent } from './grd/grd.component';
+import { environment } from 'src/environments/environment';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -36,7 +39,8 @@ import { GrdComponent } from './grd/grd.component';
     HomeComponent,
     PageNotFoundComponent,
     CounterComponent,
-    GrdComponent
+    GrdComponent,
+    LoginComponent
 
   ],
   providers: [
@@ -47,8 +51,9 @@ import { GrdComponent } from './grd/grd.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     MaterialModule,
-    HansLibModule,
+    HansLibModule.forRoot({ apiUrl: environment.ROOT_URL }),
     FormsModule
   ],
 
