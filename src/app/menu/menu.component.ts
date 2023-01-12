@@ -26,4 +26,14 @@ export class MenuComponent implements OnInit {
   get condition() {
     return (this.screenService.screenWidth$.value > 638);
   }
+
+  showLogin() {
+    let nodeList = document.querySelectorAll("section:not(#login)");
+    let loginElement = document.getElementById("login");
+    nodeList.forEach(element => {
+      if (element !== loginElement) { element.classList.add("blur") }
+    });
+    loginElement?.classList.remove("d-none");
+    loginElement?.classList.add("d-block");
+  }
 }

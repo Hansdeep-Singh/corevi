@@ -16,7 +16,7 @@
         <!-- <button mat-icon-button aria-label="Login">
           Login <mat-icon>login</mat-icon>
         </button> -->
-        <button mat-mini-fab color="secondary" aria-label="accent">
+        <button mat-mini-fab color="secondary" aria-label="accent" (click)="showLogin()">
           <mat-icon>login</mat-icon>
         </button>
 
@@ -30,11 +30,16 @@
   <section id="menu">
     <div class="menu">
       <img src="../assets/images/logo.svg" class="img-fluid" />
+      <button mat-mini-fab color="secondary" aria-label="accent" (click)="showLogin()">
+        <mat-icon>login</mat-icon>
+      </button>
       <div>
+
         <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
           <mat-icon>more_vert</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
+
           <button mat-menu-item>
             <mat-icon>info</mat-icon>
             <span [routerLink]="['/about']">About</span>
@@ -55,6 +60,7 @@
             <mat-icon>call</mat-icon>
             <span [routerLink]="['/contact']">Contact</span>
           </button>
+
         </mat-menu>
       </div>
     </div>

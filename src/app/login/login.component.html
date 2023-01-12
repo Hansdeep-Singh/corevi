@@ -9,8 +9,10 @@
 </section> -->
 
 <section id="login">
+    <div class="close" (click)="hideLogin()"><mat-icon>close</mat-icon></div>
     <form [formGroup]="loginForm" (ngSubmit)="submit(loginForm.value)">
         <div class="container login">
+            <h1 class="text-center">Login</h1>
             <div class="row">
                 <div class="col">
                     <mat-form-field appearance="fill">

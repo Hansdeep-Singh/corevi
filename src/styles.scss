@@ -75,7 +75,18 @@ $corevi-theme: mat.define-light-theme((color: (primary: $corevi-primary,
 
 // Master styles start
 .blur {
-  filter: blur(0.2rem);
+  filter: blur(0.4rem);
+  transition: 2s;
+}
+
+.noblur {
+  filter: blur(0.0rem);
+  transition: 2s;
+  display: none;
+}
+
+.transition {
+  transition: 2s;
 }
 
 header {
@@ -129,14 +140,34 @@ p {
 #login {
   border: $secondary-100 1px solid;
   position: fixed;
+  background-color: #fff;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 20px 9px;
-  border-radius: $border-radius;
+
   z-index: 1;
   box-shadow: $box-shadow-3;
-  filter: blur(0.0rem) !important;
+  -webkit-border-radius: 25px;
+  -webkit-border-top-right-radius: 0;
+  -moz-border-radius: 25px;
+  -moz-border-radius-topright: 0;
+  border-radius: 25px;
+  border-top-right-radius: 0;
+  display: none;
+
+  .close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -36px;
+    right: -36px;
+    padding: 5px;
+    border-radius: $border-fancy;
+    border: $secondary-100 solid 1px;
+    background-color: #fff;
+  }
 
 
   .col {

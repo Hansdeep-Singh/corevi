@@ -52,4 +52,14 @@ export class LoginComponent implements OnInit {
       });
   }
 
+  hideLogin() {
+    let nodeList = document.querySelectorAll("section:not(#login)");
+    let loginElement = document.getElementById("login");
+    nodeList.forEach(element => {
+      if (element !== loginElement) { element.classList.remove("blur") }
+    });
+    loginElement?.classList.add("d-none");
+
+  }
+
 }
