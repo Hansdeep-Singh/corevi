@@ -9,7 +9,7 @@
 </section> -->
 
 <section id="login">
-    <div class="close" (click)="hideLogin()"><mat-icon>close</mat-icon></div>
+    <mat-icon class="icon" (click)="hideLogin()">close</mat-icon>
     <form [formGroup]="loginForm" (ngSubmit)="submit(loginForm.value)">
         <div class="container login">
             <h1 class="text-center">Login</h1>
@@ -32,9 +32,20 @@
             <div class="row">
                 <div class="col"> <button mat-raised-button color="primary">Submit</button></div>
             </div>
-            <div class="row">
+            <div class="row my-1">
                 <div class="col"> <a [routerLink]="['/forgot']">Forgot Password?</a></div>
             </div>
+
         </div>
     </form>
+    <div class="container login">
+        <div class="row my-1 register">
+            <button [routerLink]=" ['/register']" mat-raised-button color="accent" (click)="hideLogin()">No account?
+                Register
+                here</button>
+            <!-- <div class="col"> <a [routerLink]=" ['/register']">No account? Register here
+            </a>
+        </div> -->
+        </div>
+    </div>
 </section>

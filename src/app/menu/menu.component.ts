@@ -28,7 +28,7 @@ export class MenuComponent implements OnInit {
   }
 
   showLogin() {
-    let nodeList = document.querySelectorAll("section:not(#login)");
+    let nodeList = document.querySelectorAll("section:not(#login):not(#notify)");
     let loginElement = document.getElementById("login");
     nodeList.forEach(element => {
       if (element !== loginElement) { element.classList.add("blur") }

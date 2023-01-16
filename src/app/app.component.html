@@ -3,9 +3,11 @@
 
 <!-- <lib-ui-debug></lib-ui-debug> -->
 <div [@notifyTrigger]="flagShowHide?'show':'hide'">
-  <lib-notify (close)="closeNotification($event)"></lib-notify>
+  <!-- <lib-notify (close)="closeNotification($event)"></lib-notify> -->
+  <app-notify (close)="closeNotification($event)"></app-notify>
 </div>
-<app-grd></app-grd>
+
+<lib-ui-debug></lib-ui-debug>
 <router-outlet></router-outlet>
 <!-- <app-carousel></app-carousel> -->
 
