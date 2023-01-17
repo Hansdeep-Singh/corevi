@@ -11,6 +11,7 @@ export class AppComponent {
   title = 'nglar';
   constructor(private engineService: EngineService, public loadingService: LoadingService) { }
   ngOnInit(): void {
+    this.loadingService.isloading$.subscribe((data) => { console.log(data) });
     this.engineService.currentNotifyMessage.subscribe((message) => {
       if (message && !message?.success) {
         this.flagShowHide = !message.success;

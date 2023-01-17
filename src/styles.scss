@@ -150,7 +150,7 @@ p {
   z-index: 1;
   box-shadow: $box-shadow-3;
   border-radius: $border-radius;
-  // display: none;
+  display: none;
 
   a {
     padding: initial;
@@ -237,6 +237,24 @@ p {
   }
 
 
+}
+
+#loading {
+  svg {
+    width: 150px;
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  @supports (backdrop-filter: blur(1rem)) {
+    .svg {
+      backdrop-filter: blur(0.1rem);
+    }
+  }
 }
 
 #carousel {
