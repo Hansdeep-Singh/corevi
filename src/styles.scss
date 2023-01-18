@@ -95,6 +95,32 @@ img:not(.logo) {
 
 // h4 {}
 
+form {
+  padding: 20px;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow-3;
+  background-color: $white-100;
+
+  h1 {
+    text-align: center;
+  }
+
+
+  mat-label {
+    display: flex;
+    align-items: center;
+  }
+
+  mat-icon {
+    margin-right: 5px;
+  }
+
+  mat-form-field {
+    width: 100%;
+  }
+
+}
+
 .blur {
   filter: blur(0.4rem);
   transition: 2s;
@@ -110,8 +136,7 @@ img:not(.logo) {
   transition: 2s;
 }
 
-.mat-h5,
-.mat-typography h5 {
+h2 {
   position: relative;
   padding-left: 25px;
   letter-spacing: 0.11em;
@@ -119,7 +144,7 @@ img:not(.logo) {
   font-size: 1.25rem;
 }
 
-h5:before {
+h2:before {
   content: "";
   position: absolute;
   display: inline-block;
@@ -139,14 +164,10 @@ p {
 }
 
 #login {
-  border: $secondary-200 1px solid;
   position: fixed;
-  background-color: #fff;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 20px 9px;
-
   z-index: 1;
   box-shadow: $box-shadow-3;
   border-radius: $border-radius;
@@ -418,18 +439,6 @@ p {
 
 #contact {
 
-  mat-label {
-    display: flex;
-    align-items: center;
-  }
-
-  mat-icon {
-    margin-right: 5px;
-  }
-
-  mat-form-field {
-    width: 100%;
-  }
 
   p {
     margin: initial;
@@ -444,11 +453,7 @@ p {
     opacity: 0.6;
   }
 
-  .contact-form {
-    padding: 20px;
-    border-radius: $border-radius;
-    box-shadow: $box-shadow-3;
-  }
+
 
   .phone-numbers {
     margin-top: $margin-top;

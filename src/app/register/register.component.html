@@ -1,1 +1,57 @@
-<p>register</p>
+<section id="register">
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg">
+                    <form [formGroup]="registerForm" (ngSubmit)="submit(registerForm.value)">
+                        <h1>REGISTER</h1>
+                        <h2>Get on board, fill in the form and register.</h2>
+                        <div class="row">
+                            <div class="col-md">
+                                <mat-form-field appearance="fill">
+                                    <mat-label> <mat-icon>email</mat-icon>Email
+                                        address*<small>(required)</small></mat-label>
+                                    <input matInput formControlName="emailAddress">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md">
+                                <mat-form-field appearance="fill">
+                                    <mat-label> <mat-icon>mail</mat-icon>Password*</mat-label>
+                                    <input matInput formControlName="password">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <!-- <div class="row">
+                            <div class="col-md">
+                                <mat-form-field appearance="fill">
+                                    <mat-label> <mat-icon>forum</mat-icon>Textarea</mat-label>
+                                    <textarea matInput></textarea>
+                                </mat-form-field>
+                            </div>
+                        </div> -->
+                        <div class="row">
+                            <div class="col-md">
+                                <div class="valid" (mouseover)="validForm()">
+                                    <button mat-raised-button color="primary"
+                                        [disabled]="registerForm.invalid">Register</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+
+                <div class="col-lg horizontal-flex-center">
+                    <img src="../assets/images/vector-contact.jpg" />
+                </div>
+            </div>
+        </div>
+
+
+
+    </header>
+
+</section>
