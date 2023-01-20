@@ -89,6 +89,46 @@ header {
   background-image: $gradiant-background;
 }
 
+ul {
+  padding: 0 !important;
+}
+
+ul li {
+  list-style: none;
+}
+
+footer {
+  background-color: rgb(40, 40, 40);
+  color: #fff;
+
+  .mat-icon {
+    font-size: 2.5rem;
+    height: 40px;
+    width: 40px;
+  }
+
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 3.4rem 0;
+  }
+
+  .social>div {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+
+  mat-icon {
+    flex-grow: 4;
+  }
+
+
+}
+
 img:not(.logo) {
   max-width: 100%;
   height: auto;
@@ -172,7 +212,7 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  box-shadow: $box-shadow-3;
+
   border-radius: $border-radius;
   display: none;
 
@@ -199,12 +239,13 @@ p {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: -26px;
-    right: -26px;
+    top: -32px;
+    right: -32px;
     padding: 17px;
     border-radius: $border-circle;
-    border: $secondary-200 solid 1px;
+    box-shadow: $box-shadow-1;
     background-color: #fff;
+    border: 1px solid #d3d3d3;
     cursor: pointer;
   }
 
@@ -224,9 +265,7 @@ p {
   }
 }
 
-// .col-lg {
-//   background-color: rgb(30, 11, 50);
-// }
+
 
 // Master styles end
 
