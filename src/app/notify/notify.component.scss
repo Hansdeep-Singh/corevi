@@ -19,8 +19,6 @@
         padding: 7px 20px;
         border: 1px solid red;
         border-radius: 25px;
-
-
     }
 
     h3 {
@@ -46,7 +44,7 @@
     }
 
     .fail {
-        animation: shake 1.82s cubic-bezier(.36, .07, .19, .97) both;
+        animation: shake 2.82s cubic-bezier(.36, .07, .19, .97) both;
         transform: translate3d(0, 0, 0);
         backface-visibility: hidden;
         perspective: 1000px;

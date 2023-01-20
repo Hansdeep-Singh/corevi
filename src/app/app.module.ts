@@ -25,6 +25,8 @@ import { environment } from 'src/environments/environment';
 import { LoginComponent } from './login/login.component';
 import { NotifyComponent } from './notify/notify.component';
 import { RegisterComponent } from './register/register.component';
+import { SecureComponent } from './secure/secure.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -47,6 +49,8 @@ import { RegisterComponent } from './register/register.component';
     LoginComponent,
     NotifyComponent,
     RegisterComponent,
+    SecureComponent,
+    FooterComponent,
 
   ],
   providers: [
