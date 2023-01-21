@@ -1,21 +1,29 @@
 <section id="notify">
     <div *ngIf="!status" class="notify-box fail">
         <div class="header">
-            <div>
-                <h3>Notification </h3>
-            </div>
+
+            <h3>Notification </h3>
             <div class="counter">
                 Closing in ({{counter}})
+
             </div>
+
         </div>
         <small>{{message}}</small>
 
         <mat-icon (click)="closeNotify()">close</mat-icon>
     </div>
     <div *ngIf="status" class="notify-box pass">
-        <h5>Notification</h5>
-        <p>{{message}}</p>
+        <div class="header">
 
+            <h3>Notification </h3>
+            <div class="counter">
+                Closing in ({{counter}})
+
+            </div>
+
+        </div>
+        <small>{{message}}</small>
         <mat-icon (click)="closeNotify()">close</mat-icon>
     </div>
 </section>
