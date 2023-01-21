@@ -27,6 +27,7 @@ import { NotifyComponent } from './notify/notify.component';
 import { RegisterComponent } from './register/register.component';
 import { SecureComponent } from './secure/secure.component';
 import { FooterComponent } from './footer/footer.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 
@@ -51,6 +52,7 @@ import { FooterComponent } from './footer/footer.component';
     RegisterComponent,
     SecureComponent,
     FooterComponent,
+    LogoutComponent,
 
   ],
   providers: [

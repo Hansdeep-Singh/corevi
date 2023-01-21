@@ -43,6 +43,7 @@ export class LoginComponent implements OnInit {
 
           this.message = { success: true, notifyMessage: notify.message };
           this.engineService.changeNotifyMessage(this.message);
+          this.hideLogin();
           // this.close.emit(false); This is used to close the notification.
         }
         else {

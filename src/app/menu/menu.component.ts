@@ -1,5 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { ScreenService } from 'hans-lib';
+import { AuthService, ScreenService } from 'hans-lib';
 
 
 
@@ -10,7 +10,7 @@ import { ScreenService } from 'hans-lib';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(private screenService: ScreenService) { }
+  constructor(private screenService: ScreenService, private authService: AuthService) { }
 
   ngOnInit(): void {
     console.log(this.screenService.mediaBreakpoint$.value);
@@ -25,6 +25,10 @@ export class MenuComponent implements OnInit {
 
   get condition() {
     return (this.screenService.screenWidth$.value > 638);
+  }
+
+  get logged() {
+    return this.authService?.isloggedin;
   }
 
   showLogin() {
