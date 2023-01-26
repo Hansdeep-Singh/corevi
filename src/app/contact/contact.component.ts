@@ -1,3 +1,4 @@
+import { JsonPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CallsService, EngineService, INotifyConfig } from 'hans-lib';
@@ -26,6 +27,17 @@ export class ContactComponent implements OnInit {
     this.contactForm.invalid ? this.engineService.changeNotifyMessage(this.message) : "";
   }
   submit(post: any) {
-    console.log(post);
+    JSON.stringify(post);
+    this.callService.post("Broadcast", "SendEmail", post).subscribe((data) => {
+      const notify = data?.notify;
+      if (data?.success) {
+        this.message = { success: true, notifyMessage: notify?.message };
+        this.engineService.changeNotifyMessage(this.message);
+      }
+      else {
+        this.message = { success: notify?.success, notifyMessage: notify?.message };
+        this.engineService.changeNotifyMessage(this.message);
+      }
+    })
   }
 }

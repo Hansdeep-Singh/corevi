@@ -28,6 +28,7 @@ import { RegisterComponent } from './register/register.component';
 import { SecureComponent } from './secure/secure.component';
 import { FooterComponent } from './footer/footer.component';
 import { LogoutComponent } from './logout/logout.component';
+import { VideosComponent } from './videos/videos.component';
 
 
 
@@ -53,6 +54,7 @@ import { LogoutComponent } from './logout/logout.component';
     SecureComponent,
     FooterComponent,
     LogoutComponent,
+    VideosComponent,
 
   ],
   providers: [
