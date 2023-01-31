@@ -2,14 +2,22 @@
     <header>
         <div class="container">
             <div class="row">
-                <div class="col-lg">
+                <div class="col-lg-7">
                     <h1>Contact Us</h1>
                     <p>If you have any questions contact us.</p>
+
                 </div>
-                <div class="col-lg horizontal-flex-center">
-                    <img src="../assets/images/vector-contact.jpg" />
+                <div class="col-lg-5">
+                    <div>
+                        <img src="../assets/images/contact-1.jpg" />
+                    </div>
+                    <div>
+                        <img src="../assets/images/contact-2.jpg" />
+                    </div>
+
                 </div>
             </div>
+
         </div>
     </header>
     <div class="container">
@@ -17,7 +25,7 @@
             <div class="col-lg">
                 <form [formGroup]="contactForm" (ngSubmit)="submit(contactForm.value)">
                     <h1>CONTACT US</h1>
-                    <h2>Have Question? Write a Message</h2>
+                    <h3>Have Question? Write a Message</h3>
                     <div class="row">
                         <div class="col-md">
                             <mat-form-field appearance="fill">
@@ -58,12 +66,23 @@
                 </form>
             </div>
             <div class="col-lg">
-                <h5>Inbound contact</h5>
+                <h2>Inbound contact</h2>
                 <p>We will catch you as early as we receive the message</p>
                 <div class="phone-numbers">
                     <p class="accent">We're available 9 to 5. Call Now.</p>
-                    <span>04269856223</span>
-                    <span>04589565666</span>
+                    <div class="icon-text">
+                        <mat-icon>phone_iphone</mat-icon>
+                        <h5><b>04269856223</b></h5>
+                    </div>
+                    <div class="icon-text">
+                        <mat-icon>call</mat-icon>
+                        <h5><b>03-45641465</b></h5>
+                    </div>
+                    <div class="icon-text">
+                        <mat-icon>mail</mat-icon>
+                        <h5><b>corevi.townsend@gmail.com</b></h5>
+                    </div>
+
                 </div>
             </div>
         </div>

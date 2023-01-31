@@ -34,6 +34,7 @@ import { VideosComponent } from './videos/videos.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +56,6 @@ import { VideosComponent } from './videos/videos.component';
     FooterComponent,
     LogoutComponent,
     VideosComponent,
-
   ],
   providers: [
     ScreenService,
