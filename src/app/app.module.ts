@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-
 import { MaterialModule } from './material.module';
 import { MenuComponent } from './menu/menu.component';
 
@@ -29,11 +28,6 @@ import { SecureComponent } from './secure/secure.component';
 import { FooterComponent } from './footer/footer.component';
 import { LogoutComponent } from './logout/logout.component';
 import { VideosComponent } from './videos/videos.component';
-
-
-
-
-
 
 @NgModule({
   declarations: [
