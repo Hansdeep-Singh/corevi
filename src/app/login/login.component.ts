@@ -28,6 +28,10 @@ export class LoginComponent implements OnInit {
     password: new FormControl('', Validators.required)
   })
 
+  validForm() {
+    this.message = { success: false, notifyMessage: 'Please complete the form' };
+    this.loginForm.invalid ? this.engineService.changeNotifyMessage(this.message) : "";
+  }
   submit(post: any) {
     this.callsService.post("User", "LoginViaEmailAddress", post)
       .subscribe((data) => {

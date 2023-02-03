@@ -9,7 +9,6 @@
 </section> -->
 
 <section id="login">
-
     <form [formGroup]="loginForm" (ngSubmit)="submit(loginForm.value)">
         <mat-icon class="icon" (click)="hideLogin()">close</mat-icon>
         <div class="container login">
@@ -31,7 +30,11 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col"> <button mat-raised-button color="primary">Submit</button></div>
+                <div class="col">
+                    <div class="valid" (mouseover)="validForm()">
+                        <button mat-raised-button [disabled]="loginForm.invalid" color="primary">Submit</button>
+                    </div>
+                </div>
             </div>
             <div class="row my-1">
                 <div class="col"> <a [routerLink]="['/forgot']">Forgot Password?</a></div>

@@ -28,6 +28,7 @@ import { SecureComponent } from './secure/secure.component';
 import { FooterComponent } from './footer/footer.component';
 import { LogoutComponent } from './logout/logout.component';
 import { VideosComponent } from './videos/videos.component';
+import { PodcastsComponent } from './podcasts/podcasts.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { VideosComponent } from './videos/videos.component';
     FooterComponent,
     LogoutComponent,
     VideosComponent,
+    PodcastsComponent,
   ],
   providers: [
     ScreenService,

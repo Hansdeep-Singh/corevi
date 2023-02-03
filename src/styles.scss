@@ -156,7 +156,7 @@ img:not(.logo) {
 
 // h4 {}
 
-h5 {}
+// h5 {}
 
 form {
   padding: 20px;
@@ -485,7 +485,36 @@ p {
 #videos {
   .col-lg {
     margin-top: 20px;
-    height: 300px;
+
+    iframe {
+      height: 210px;
+    }
+
+  }
+}
+
+#podcasts {
+  .col-lg {
+    margin-top: 20px;
+
+    iframe {
+      height: 210px;
+    }
+  }
+
+  h1 {
+
+    float: left;
+  }
+
+
+  h1::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    content: "\f007";
+
+    margin: 0 10px;
+
   }
 }
 
