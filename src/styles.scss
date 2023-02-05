@@ -181,6 +181,8 @@ form {
 iframe {
   width: 100%;
   height: 100%;
+  border-radius: 10px;
+  padding: 10px 0px;
 }
 
 .icon-text {
@@ -246,13 +248,24 @@ p {
   font-weight: 600;
 }
 
+#home {
+  .container {
+    .row {
+      .col-lg {
+        box-shadow: $box-shadow-3;
+        border-radius: $border-radius;
+      }
+
+    }
+  }
+}
+
 #login {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-
   border-radius: $border-radius;
   display: none;
 
@@ -482,13 +495,13 @@ p {
   }
 }
 
+
+
 #videos {
   .col-lg {
     margin-top: 20px;
 
-    iframe {
-      height: 210px;
-    }
+
 
   }
 }
@@ -497,24 +510,30 @@ p {
   .col-lg {
     margin-top: 20px;
 
-    iframe {
-      height: 210px;
-    }
+
   }
 
   h1 {
-
-    float: left;
+    display: inline-block;
+    position: relative;
   }
-
 
   h1::after {
     font-family: "Font Awesome 5 Free";
     font-weight: 400;
+    font-size: 16px;
     content: "\f007";
-
-    margin: 0 10px;
-
+    position: absolute;
+    background-color: hsl(228deg, 100%, 27%);
+    color: #ffffff;
+    border-radius: 50%;
+    right: -29px;
+    top: -15px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
