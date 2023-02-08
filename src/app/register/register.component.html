@@ -2,46 +2,64 @@
     <header>
         <div class="container">
             <div class="row">
-                <div class="col-lg">
-                    <form [formGroup]="registerForm" (ngSubmit)="submit(registerForm.value)">
-                        <h1>REGISTER</h1>
-                        <h2>Get on board, fill in the form and register.</h2>
-                        <div class="row">
-                            <div class="col-md">
-                                <mat-form-field appearance="fill">
-                                    <mat-label>Email address</mat-label>
-                                    <input matInput formControlName="emailAddress">
+                <div class="col-lg-7">
+                    <h1>Register</h1>
+                    <p>Creating an account gives you great benefits : -</p>
+                    <ul>
+                        <li>Your own personalised workout calendar</li>
+                        <li>Progress check and improvemant plans</li>
+                        <li>Exclusive resource content</li>
+                        <li>Corevi programs</li>
+                    </ul>
 
-                                </mat-form-field>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <mat-form-field appearance="fill">
-                                    <mat-label> Password</mat-label>
-                                    <input matInput formControlName="password">
-                                </mat-form-field>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="valid" (mouseover)="validForm()">
-                                    <button mat-raised-button color="primary"
-                                        [disabled]="registerForm.invalid">Register</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
                 </div>
+                <div class="col-lg-5">
+                    <div>
+                        <img src="../assets/images/register-1.jpg" />
+                    </div>
+                    <div>
+                        <img src="../assets/images/register-2.jpg" />
+                    </div>
 
-                <div class="col-lg horizontal-flex-center">
-                    <img src="../assets/images/vector-contact.jpg" />
                 </div>
             </div>
+
         </div>
 
-
-
     </header>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form [formGroup]="registerForm" (ngSubmit)="submit(registerForm.value)">
+                    <h1>REGISTER</h1>
+                    <h2>Get on board, fill in the form and register.</h2>
+                    <div class="row">
+                        <div class="col-md">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Email address</mat-label>
+                                <input matInput formControlName="emailAddress">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md">
+                            <mat-form-field appearance="fill">
+                                <mat-label> Password</mat-label>
+                                <input matInput formControlName="password">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="valid" (mouseover)="validForm()">
+                                <button mat-raised-button color="primary"
+                                    [disabled]="registerForm.invalid">Register</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
 </section>
